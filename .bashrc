@@ -21,8 +21,6 @@ alias re="nr release"
 # -------------------------------- #
 # Git
 # -------------------------------- #
-# Use github/hub
-alias git=hub
 
 # Go to project root
 alias grt='cd "$(git rev-parse --show-toplevel)"'
@@ -130,9 +128,9 @@ function dir() {
 function clone() {
   if [[ -z $2 ]]
   then
-    hub clone "$@" && cd "$(basename "$1" .git)"
+    git clone "$@" && cd "$(basename "$1" .git)"
   else
-    hub clone "$@" && cd "$2"
+    git clone "$@" && cd "$2"
   fi
 }
 
