@@ -108,7 +108,7 @@ function repros() {
   cd ~/r/$1
 }
 
-function forks() {
+function f() {
   cd ~/f/$1
 }
 
